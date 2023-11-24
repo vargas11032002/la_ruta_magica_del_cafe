@@ -64,7 +64,7 @@ The Huila Magical Coffee Route website is a project dedicated to improving touri
 </p>
 
 ```bash
-  yarn install
+  npm install
 ```
 <br>
 
@@ -73,10 +73,6 @@ The Huila Magical Coffee Route website is a project dedicated to improving touri
   If you are using it in a development environment, use:
 
 </p>
-
-```bash
-  yarn dev
-```
 
 <div align="center">
 	<img src="./public/img/backend_dev.png" alt="Backend running"/>
@@ -89,7 +85,7 @@ The Huila Magical Coffee Route website is a project dedicated to improving touri
   For production, use:</p>
 
 ```bash
-  yarn star
+  npm start
 ```
 ---
 ### 💻Front-end
@@ -112,7 +108,7 @@ The Huila Magical Coffee Route website is a project dedicated to improving touri
 </p>
 
 ```bash
-  npm run dev
+  npm start
 ```
 <div align="center">
 	<img src="./public/img/gg.png" alt="Backend running"/>
@@ -126,7 +122,7 @@ For production, use:
 </p>
 
 ```bash
-  npm run deploy
+ aun no esta para produccion
 ```
 
 

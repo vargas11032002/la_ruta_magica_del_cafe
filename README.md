@@ -139,6 +139,6 @@ For production, use:
 <!-- Documentación oficial -->
 ## Official Documentation
 
-[Documentación v1.0](https://docs.google.com/document/d/1Br7bc065dNes2iKwCCWsEJL7lmKBpn9N/edit)
+[Documentación v1.0](https://docs.google.com/document/d/1c8bws-RygYr__5D_ydwNNhXssmx_vDNA/edit?usp=sharing&ouid=111359141192935185382&rtpof=true&sd=true)
 
 Made with 😪😭 and JavaScript.

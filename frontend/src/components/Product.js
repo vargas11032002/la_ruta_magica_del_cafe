@@ -10,11 +10,12 @@ function Product(props) {
     <div className="card mb-3 h-100">
       <img
         src={product.image}
-        className="card-img-top img-fluid w-100 h-50 "
+        className="card-img-top img-fluid w-100 h-50"
         alt={product.name}
       />
-      <div className="card-body ">
+      <div className="card-body">
         <h5 className="card-title">{product.name}</h5>
+        <p className="card-text">{product.description}</p>
         <p className="card-text">$ {product.price}</p>
         {quantity > 0 ? (
           <div className="row">
@@ -49,7 +50,7 @@ function Product(props) {
             className="btn btn-primary"
             onClick={() => cart.addItem(product.id)}
           >
-            reservar
+            Reservar
           </button>
         )}
       </div>

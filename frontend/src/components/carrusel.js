@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -10,25 +11,31 @@ import {
 const items = [
   {
     src: 'https://sanagustinhuila.com.co/img/blog/mirador-mano-del-gigante-huila.webp',
-    altText: 'fundadores 1',
-    caption: 'Slide 1',
+    altText: 'Oferta Especial',
+    caption: '¡Descuento del 20% en productos seleccionados!',
     key: 1,
   },
   {
-    src: 'https://tecnicadecimo.files.wordpress.com/2016/01/sena.png',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
+    src: 'https://agenciapublicadeempleo.sena.edu.co/imgLayout/logos/Logosimbolo-SENA-PRINCIPAL.png',
+    altText: 'Nuevo Producto',
+    caption: 'Descubre nuestra última incorporación: Producto X',
     key: 2,
   },
   {
     src: 'https://www.italia-sica.org/wp-content/uploads/2014/04/IILA-nuovo-trasp.png',
-    altText: 'Slide 3',
-    caption: 'Slide 3',
+    altText: 'Oferta del Día',
+    caption: '¡Solo hoy! Compra uno y llévate otro gratis.',
     key: 3,
   },
 ];
 
-function Example(args) {
+const imageStyle = {
+  width: '100%',
+  height: '300px', // Ajusta la altura al 100%
+  objectFit: 'contain', // Asegura que la imagen cubra el espacio disponible sin distorsionarse
+};
+
+function Example() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -44,38 +51,42 @@ function Example(args) {
     setActiveIndex(nextIndex);
   };
 
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
+  const autoChangeInterval = 3000; // Cambia el intervalo a 3 segundos
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} className="d-block w-100" /> {/* Clase Bootstrap para imagen centrada y con ancho del 100% */}
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
-      </CarouselItem>
-    );
-  });
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      next();
+    }, autoChangeInterval);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [activeIndex]);
+
+  const slides = items.map((item) => (
+    <CarouselItem
+      onExiting={() => setAnimating(true)}
+      onExited={() => setAnimating(false)}
+      key={item.src}
+    >
+      <img src={item.src} alt={item.altText} style={imageStyle} />
+      <CarouselCaption>
+        <h3>{item.caption}</h3>
+      </CarouselCaption>
+    </CarouselItem>
+  ));
 
   return (
     <Carousel
       activeIndex={activeIndex}
       next={next}
       previous={previous}
-      {...args}
+      interval={false}
     >
       <CarouselIndicators
         items={items}
         activeIndex={activeIndex}
-        onClickHandler={goToIndex}
+        onClickHandler={setActiveIndex}
       />
       {slides}
       <CarouselControl

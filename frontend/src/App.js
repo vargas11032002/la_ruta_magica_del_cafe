@@ -19,7 +19,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/"
+              path="/register"
               element={
                 <div className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}>
                   <Register />
@@ -34,13 +34,13 @@ function App() {
                 </div>
               }
             />
+            <Route path="/" element={<Home />} />
             <Route
               path="/*"
               element={<Navbar />}
             />
           </Routes>
           <Routes>
-            <Route path="/home" element={<Home />} />
             <Route path="/store" element={<Store />} />
             <Route path="/productos" element={<Productos />} />
             <Route path="/success" element={<Success />} />

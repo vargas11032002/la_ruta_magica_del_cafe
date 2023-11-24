@@ -33,7 +33,7 @@ const Login = () => {
           setTimeout(() => {
             setMensaje("");
             localStorage.setItem("token", data?.usuario.token);
-            navigate(`/home`);
+            navigate(`/store`);
           }, 1500);
         })
         .catch((error) => {

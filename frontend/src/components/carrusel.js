@@ -10,7 +10,7 @@ import {
 
 const items = [
   {
-    src: 'https://sanagustinhuila.com.co/img/blog/mirador-mano-del-gigante-huila.webp',
+    src: 'https://www.huila.gov.co/info/huila_bco/media/bloque11403.png',
     altText: 'Oferta Especial',
     caption: '¡Descuento del 20% en productos seleccionados!',
     key: 1,

@@ -1,7 +1,7 @@
 <!-- Banners ruta magica del cafe del huila -->
 <div align="center">
 <img height="200px" src="https://www.epicu.co/wp-content/uploads/2023/02/Logosimbolo-SENA-PRINCIPAL.png" alt="Logo SENA"/>
-<img height="200px" src="./public/img/logoruta.png" alt="Logo SAGA"/>
+<img height="200px" src="https://ugc.production.linktr.ee/zbCyYKp9RnKHj6eVJvXI_Logo.png" alt="Logo "/>
 
  <!-- Typing ruta magica del cafe del huila -->
 </div>

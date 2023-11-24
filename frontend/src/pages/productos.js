@@ -1,0 +1,19 @@
+import { arrayProducts } from "../articulos.js";
+import Product from "../components/Product";
+
+function Store() {
+  return (
+    <div>
+      <h1 className="mt-3">productos De La Ruta Magica Del Cafe Del Huila</h1>
+      <div className="row g-4 mt-2 mb-4">
+        {arrayProducts.map((product, index) => (
+          <div className="col-md-4" key={index}>
+            <Product product={product}/>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Store;

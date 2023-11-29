@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "backend",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/user", "dest": "backend/app.js" },
+      { "src": "/register", "dest": "backend/app.js" },
+      { "src": "/login", "dest": "backend/app.js" },
+      { "src": "/store*", "dest": "frontend/index.html" },
+      { "src": "/productos*", "dest": "frontend/index.html" },
+      { "src": "/success*", "dest": "frontend/index.html" },
+      { "src": "/cancel*", "dest": "frontend/index.html" },
+      { "src": "/(.*)", "dest": "frontend/$1" }
+    ],
+    "env": {
+      "CONCURRENTLY": "true"
+    }
+  }
+  

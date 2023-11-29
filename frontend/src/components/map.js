@@ -107,7 +107,7 @@ class Prueba extends Component {
       
       const popupContent = '<h3>' + punto.nombre + '</h3>' +
         '<p>' + punto.descripcion + '</p>' +
-        '<img src="' + punto.imagen + '" style="max-width: 200px; max-height: 300px;" />';
+        '<img src="' + punto.imagen + '" style="max-width: 50%; max-height: 505;" />';
 
       marker.bindPopup(popupContent).openPopup();
     });
@@ -116,7 +116,8 @@ class Prueba extends Component {
   render() {
     return (
       <div>
-        <div id="map" style={{ height: '500px', width: '350px', margin: '0 auto' }}></div>
+        <div id="map" style={{ marginLeft:'30px',height: '530px', width: '380px', margin: '0 auto',borderRadius: '15px', // Ajusta el radio de borde según tus preferencias
+            overflow: 'hidden' }}></div>
       </div>
     );
   }

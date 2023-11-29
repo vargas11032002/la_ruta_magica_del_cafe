@@ -1,4 +1,6 @@
 body{
-    background-image: url("https://www.10wallpaper.com/wallpaper/2560x1600/1409/cup_of_coffee-high_quality_Wallpaper_2560x1600.jpg");
-    
+    background-repeat: no-repeat;    background-image: url("https://www.bonka.es/themes/custom/bonka/img/donde_viene_cafe_1.jpg");
+
+    background-size: cover;
+
   }

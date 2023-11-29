@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Map from "../components/map";
 import Carrucel from "../components/carrusel";
+import "./stylesh.css"
 
 function Home() {
   return (
-    <div className="container">
+    <div className="container" id="padree">
       <div className="row">
         <div className="col-12 col-md-6" id="textoo">
           <h1 className="mt-4">Ruta Mágica Del Café Del Huila</h1>
@@ -30,7 +31,7 @@ function Home() {
           </Link>
         </div>
 
-        <div className="col-12 col-md-6 text-center" id="map" style={{ maxHeight: "700px" ,marginTop:"70px"}}>
+        <div className="col-12 col-md-6 text-center" id="mapp" style={{ maxHeight: "700px" ,marginTop:"70px"}}>
           <Map className="img-fluid" alt="Map" style={{ height: "100%" }} />
         </div>
       </div>

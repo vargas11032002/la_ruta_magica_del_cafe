@@ -1,16 +1,13 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart";
 import CartProduct from "../components/CartProduct";
-import "./navbar.css"
-
-
+import "./navbar.css";
 
 function Navbar() {
+  const navigate = useNavigate();
   const cart = useContext(Cart);
-  const productsCount = cart.items.reduce(
-    (sum, product) => sum + product.quantity,
-    0
-  );
+  const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   const checkout = async () => {
     await fetch("http://localhost:4000/checkout", {
@@ -36,7 +33,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light ">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-         Ruta Magica Del Cafe Del Huila
+          Ruta Magica Del Cafe Del Huila
         </a>
         <button
           className="navbar-toggler"
@@ -69,12 +66,28 @@ function Navbar() {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-               carrito de ({productsCount}) compras
+              carrito de ({productsCount}) compras
             </button>
 
+            {/* Botón de cerrar sesión */}
+            <button
+              type="button"
+              className="btn btn-danger ms-2"
+              onClick={() => {
+                // Lógica de cerrar sesión, por ejemplo, limpiar el token del almacenamiento local
+                localStorage.removeItem("token");
+                // Redirigir a la página de registro
+                navigate("/register");
+              }}
+            >
+              Cerrar Sesión
+            </button>
+
+            {/* Modal del carrito */}
             <div
               className="modal fade"
               id="exampleModal"
+              tabIndex="-1"
               aria-labelledby="exampleModalLabel"
               aria-hidden="true"
             >
@@ -110,7 +123,6 @@ function Navbar() {
                             .toString()
                             .replace(".", ",")
                             .replace(/,00/, "")}
-                          
                         </h4>
                       </div>
                     ) : (

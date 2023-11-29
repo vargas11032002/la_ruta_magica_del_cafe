@@ -1,5 +1,6 @@
 import { Cart } from "../Cart";
 import { useContext } from "react";
+import "./tstile.css"
 
 function Product(props) {
   const { product } = props;
@@ -7,7 +8,7 @@ function Product(props) {
   const quantity = cart.getQuantity(product.id);
 
   return (
-    <div className="card mb-3 h-100">
+    <div className="card mb-3 h-100" id="tarjet">
       <img
         src={product.image}
         className="card-img-top img-fluid w-100 h-50"

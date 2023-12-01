@@ -26,7 +26,7 @@ const Login = () => {
       };
       setLoading(true);
       try {
-        const response = await axios.post("http://localhost:5000/login", Usuario);
+        const response = await axios.post("rutaback.up.railway.app/login", Usuario);
         const { data } = response;
 
         // Verifica si 'data' tiene la propiedad 'usuario' y 'token'

@@ -31,7 +31,7 @@ const Register = () => {
       };
       setLoading(true);
       await axios
-        .post("backendmio.railway.internal/register", Usuario)
+        .post("rutaback.up.railway.app/register", Usuario)
         .then((res) => {
           const { data } = res;
           setMensaje(data.mensaje);

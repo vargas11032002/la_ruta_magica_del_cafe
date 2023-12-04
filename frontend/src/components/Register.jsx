@@ -31,7 +31,7 @@ const Register = () => {
       };
       setLoading(true);
       await axios
-        .post("https://la-ruta-magica-del-cafe.vercel.app/register", Usuario)
+        .post("https://la-ruta-magica-del-cafe.vercel.app/rutaback.up.railway.app/register", Usuario)
         .then((res) => {
           const { data } = res;
           setMensaje(data.mensaje);

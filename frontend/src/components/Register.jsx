@@ -41,7 +41,7 @@ const Register = () => {
 
       try {
         const res = await axios.post(
-          "https:rutaback.up.railway.app/register",
+          "https://la-ruta-magica-del-cafe.vercel.app/rutaback.up.railway.app/register",
           Usuario,
           axiosConfig
         );

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles.module.scss"
+import styles from "./styles.module.scss";
 const Register = () => {
   const [inputs, setInputs] = useState({
     correo: "",
@@ -51,7 +51,7 @@ const Register = () => {
 
   return (
     <>
-      <div>
+        <div className={styles.formContainer}>
         <h3>Bienvenido a la Ruta Magica Del Cafe Del Huila</h3>
         <h2> Registro!</h2>
         <form onSubmit={(e) => onSubmit(e)}>

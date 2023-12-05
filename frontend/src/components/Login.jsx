@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles.module.scss"
+import styles from "./styles.module.scss";
 const Login = () => {
   const [inputs, setInputs] = useState({ correo: "", contraseña: "" });
   const [mensaje, setMensaje] = useState();
@@ -58,7 +58,7 @@ const Login = () => {
 
   return (
     <>
-      <div>
+        <div className={styles.formContainer}>
         <h3>Bienvenido a la Ruta mágica del café del Huila</h3>
         <h2>Inicio de Sesión!</h2>
         <form onSubmit={(e) => onSubmit(e)}>

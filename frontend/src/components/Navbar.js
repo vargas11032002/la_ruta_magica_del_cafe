@@ -10,13 +10,14 @@ function Navbar() {
   const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   const checkout = async () => {
-    await fetch("http://localhost:4000/checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ items: cart.items }),
-    })
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ items: cart.items }),
+})
+
       .then((response) => {
         console.log(response);
         return response.json();

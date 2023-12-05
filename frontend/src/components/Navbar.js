@@ -10,7 +10,7 @@ function Navbar() {
   const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   const checkout = async () => {
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_URL:4001}/checkout`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

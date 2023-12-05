@@ -2,8 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from "./styles.module.scss";
-
 const Login = () => {
   const [inputs, setInputs] = useState({ correo: "", contraseña: "" });
   const [mensaje, setMensaje] = useState();
@@ -26,7 +24,7 @@ const Login = () => {
       };
       setLoading(true);
       try {
-        const response = await axios.post("rutaback.up.railway.app/login", Usuario);
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, Usuario);
         const { data } = response;
 
         // Verifica si 'data' tiene la propiedad 'usuario' y 'token'
@@ -47,7 +45,7 @@ const Login = () => {
         }
       } catch (error) {
         console.error(error);
-        setMensaje("Correo u contraseña incorrecta");
+        setMensaje("Correo o contraseña incorrecta");
         setTimeout(() => {
           setMensaje("");
         }, 1500);
@@ -60,53 +58,46 @@ const Login = () => {
 
   return (
     <>
-      <div className={styles.formContainer}>
+      <div>
         <h3>Bienvenido a la Ruta mágica del café del Huila</h3>
-        <br />
         <h2>Inicio de Sesión!</h2>
         <form onSubmit={(e) => onSubmit(e)}>
-          <div className={styles.inputContainer}>
-            <div className={styles.left}>
-              <label htmlFor="correo">Correo</label>
-              <input
-                onChange={(e) => HandleChange(e)}
-                value={correo}
-                name="correo"
-                id="correo"
-                type="email"
-                placeholder="Correo..."
-                autoComplete="off"
-              />
-            </div>
-            {/* ... (resto del código) ... */}
+          <div>
+            <label htmlFor="correo">Correo</label>
+            <input
+              onChange={(e) => HandleChange(e)}
+              value={correo}
+              name="correo"
+              id="correo"
+              type="email"
+              placeholder="Correo..."
+              autoComplete="off"
+            />
           </div>
 
-          <div className={styles.inputContainer}>
-            <div className={styles.left}>
-              <label htmlFor="contraseña">Contraseña</label>
-              <input
-                onChange={(e) => HandleChange(e)}
-                value={contraseña}
-                name="contraseña"
-                id="contraseña"
-                type="password"
-                placeholder="Contraseña..."
-                autoComplete="off"
-              />
-            </div>
-            {/* ... (resto del código) ... */}
+          <div>
+            <label htmlFor="contraseña">Contraseña</label>
+            <input
+              onChange={(e) => HandleChange(e)}
+              value={contraseña}
+              name="contraseña"
+              id="contraseña"
+              type="password"
+              placeholder="Contraseña..."
+              autoComplete="off"
+            />
           </div>
           <button type="submit">
             {loading ? "Cargando..." : "Iniciar Sesión"}
           </button>
           <p>
             Aun no tienes cuenta?{" "}
-            <b onClick={() => navigate("/register")}>Registrate!</b>
+            <b onClick={() => navigate("/register")}>Regístrate!</b>
           </p>
         </form>
       </div>
 
-      {mensaje && <div className={styles.toast}>{mensaje}</div>}
+      {mensaje && <div>{mensaje}</div>}
     </>
   );
 };

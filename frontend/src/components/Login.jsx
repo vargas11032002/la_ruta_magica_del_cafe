@@ -118,7 +118,7 @@ const Login = () => {
           </button>
           <p>
             Aun no tienes cuenta?{" "}
-            <b onClick={() => navigate("/")}>Registrate!</b>
+            <b onClick={() => navigate("/register")}>Registrate!</b>
           </p>
         </form>
       </div>

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart";
 import CartProduct from "../components/CartProduct";
 import "./navbar.css";
-//j//
 
 function Navbar() {
   const navigate = useNavigate();
@@ -11,7 +10,7 @@ function Navbar() {
   const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   const checkout = async () => {
-    await fetch(`${process.env.REACT_APP_BACKEND_URL:4001}/checkout`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

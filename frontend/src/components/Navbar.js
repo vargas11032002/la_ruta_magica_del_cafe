@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart";
 import CartProduct from "../components/CartProduct";
 import "./navbar.css";
+//j//
 
 function Navbar() {
   const navigate = useNavigate();

@@ -34,7 +34,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light ">
+    <nav className="navbar navbar-expand-lg " id="navcitooo">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           Ruta Magica Del Cafe Del Huila

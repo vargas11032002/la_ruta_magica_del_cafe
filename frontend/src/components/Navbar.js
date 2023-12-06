@@ -10,23 +10,27 @@ function Navbar() {
   const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
   const checkout = async () => {
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ items: cart.items }),
-    })
-      .then((response) => {
-        console.log(response);
-        return response.json();
-      })
-      .then((response) => {
-        console.log(response.url);
-        if (response.url) {
-          window.location.assign(response.url);
-        }
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ items: cart.items }),
       });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const responseData = await response.json();
+  
+      if (responseData.url) {
+        window.location.assign(responseData.url);
+      }
+    } catch (error) {
+      console.error("Error during checkout:", error);
+    }
   };
 
   return (

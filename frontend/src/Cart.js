@@ -1,7 +1,5 @@
-
 import { createContext, useState } from "react";
 import { arrayProducts, getProductData } from "./Products";
-import { arrayProductss, getProductDataa } from "./articulos";
 
 export const Cart = createContext({
   items: [],
@@ -64,13 +62,9 @@ export function CartProvider({ children }) {
   function getTotal() {
     let total = 0;
 
-    cartProducts.forEach((cartItem) => {
+    cartProducts.map((cartItem) => {
       const productData = getProductData(cartItem.id);
       total += productData.price * cartItem.quantity;
-
-      // Add the total for the "articulos" as well
-      const productDataArticulos = getProductDataa(cartItem.id);
-      total += productDataArticulos.price * cartItem.quantity;
     });
 
     return total;
@@ -84,8 +78,8 @@ export function CartProvider({ children }) {
     deleteItem,
     getTotal,
   };
-
   return <Cart.Provider value={contextValue}>{children}</Cart.Provider>;
 }
 
 export default CartProvider;
+

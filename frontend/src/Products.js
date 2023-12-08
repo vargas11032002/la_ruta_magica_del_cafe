@@ -120,23 +120,34 @@ const arrayProducts = [
     price: 5000,
     image: zuluaga,
   },
-    {
+     {
     id: "price_1OL4i6FqzLAtNtxMydPC8u3g",
-
+    name: "Nuevo Producto 1",
+    description: "Descripción del nuevo producto 1.",
+    price: 9999,
+    image: "URL de la imagen del nuevo producto 1",
+    hidden: true,
   },
   {
-  
     id: "price_1OL4k1FqzLAtNtxMNKgbtOdh",
-  
+    name: "Nuevo Producto 2",
+    description: "Descripción del nuevo producto 2.",
+    price: 9999,
+    image: "URL de la imagen del nuevo producto 2",
+    hidden: true,
   },
   {
- 
     id: "price_1OL4ktFqzLAtNtxMC5FiFS41",
+    name: "Nuevo Producto 3",
+    description: "Descripción del nuevo producto 3.",
+    price: 9999,
+    image: "URL de la imagen del nuevo producto 3",
+    hidden: true,
   },
 ];
 
 function getProductData(id) {
-  let productData = arrayProducts.find((product) => product.id === id);
+  let productData = arrayProducts.find((product) => product.id === id && !product.hidden);
 
   if (productData === undefined) {
     console.log("Product not found for id: " + id);

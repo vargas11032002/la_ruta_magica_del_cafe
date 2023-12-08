@@ -2,7 +2,7 @@ import Cafe from "./assets/images/cafe.jpg";
 import Arequipe from "./assets/images/arequipe.jpg";
 import Vinos from "./assets/images/vino.jpg";
 
-const arrayProducts = [
+const arrayProductss = [
   {
     id: "price_1OL4i6FqzLAtNtxMydPC8u3g",
     name: "Cafe artesanal",
@@ -26,7 +26,7 @@ const arrayProducts = [
   },
 ];
 
-function getProductData(id) {
+function getProductDataa(id) {
   let productData = arrayProducts.find((product) => product.id === id);
 
   if (productData === undefined) {
@@ -37,4 +37,4 @@ function getProductData(id) {
   return productData;
 }
 
-export { arrayProducts, getProductData };
+export { arrayProductss, getProductDataa };

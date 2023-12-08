@@ -120,6 +120,19 @@ const arrayProducts = [
     price: 5000,
     image: zuluaga,
   },
+    {
+    id: "price_1OL4i6FqzLAtNtxMydPC8u3g",
+
+  },
+  {
+  
+    id: "price_1OL4k1FqzLAtNtxMNKgbtOdh",
+  
+  },
+  {
+ 
+    id: "price_1OL4ktFqzLAtNtxMC5FiFS41",
+  },
 ];
 
 function getProductData(id) {

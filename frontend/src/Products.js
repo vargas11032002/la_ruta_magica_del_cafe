@@ -79,7 +79,7 @@ const arrayProducts = [
     image: florida,
   },
   {
-    id: "price_1O610wFqzLAtNtxM2fWQM6aj",
+    id: "price_1OL4ktFqzLAtNtxMC5FiFS41",
     name: "Hostal Campestre Samadhi",
     description: "Vive una experiencia única en Hostal Campestre Samadhi. Disfruta de la tranquilidad y la conexión con la naturaleza.",
     price: 30000,

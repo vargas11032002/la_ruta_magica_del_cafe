@@ -4,21 +4,21 @@ import Vinos from "./assets/images/vino.jpg";
 
 const arrayProducts = [
   {
-    id: "price_1O5HNaFqzLAtNtxMfPdL1adn",
+    id: "price_1OL4i6FqzLAtNtxMydPC8u3g",
     name: "Cafe artesanal",
     description: "Disfruta de nuestro delicioso café artesanal, cuidadosamente seleccionado y preparado para ofrecerte una experiencia única.",
     price: 5000,
     image: Cafe,
   },
   {
-    id: "price_1O5IQSFqzLAtNtxMHh28bO9T",
+    id: "price_1OL4k1FqzLAtNtxMNKgbtOdh",
     name: "Arequipe",
     description: "Prueba nuestro arequipe casero, hecho con ingredientes de alta calidad que le dan un sabor irresistible.",
     price: 5000,
     image: Arequipe,
   },
   {
-    id: "price_1O5IRkFqzLAtNtxMlQ63WLNf",
+    id: "price_1OL4ktFqzLAtNtxMC5FiFS41",
     name: "Vinos de café",
     description: "Descubre la fusión perfecta entre el aroma del café y la exquisitez de un buen vino. Nuestros vinos de café te sorprenderán.",
     price: 10000,

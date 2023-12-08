@@ -72,14 +72,14 @@ const arrayProducts = [
     image: lomachata,
   },
   {
-    id: "price_1O60wvFqzLAtNtxM4pKZQb0F",
+    id: "price_1OL4ktFqzLAtNtxMC5FiFS41",
     name: "Finca La Florida",
     description: "Descubre la belleza natural en Finca La Florida. Un lugar perfecto para disfrutar de la paz y la serenidad.",
     price: 10000,
     image: florida,
   },
   {
-    id: "price_1O610wFqzLAtNtxM2fWQM6aj",
+    id: "price_1OL4i6FqzLAtNtxMydPC8u3g",
     name: "Hostal Campestre Samadhi",
     description: "Vive una experiencia única en Hostal Campestre Samadhi. Disfruta de la tranquilidad y la conexión con la naturaleza.",
     price: 30000,
@@ -100,7 +100,7 @@ const arrayProducts = [
     image: alicia,
   },
   {
-    id: "price_1O617eFqzLAtNtxMSE82tjXf",
+    id: "price_1OL4k1FqzLAtNtxMNKgbtOdh",
     name: "Finca Villa Daniela",
     description: "Vive momentos inolvidables en Finca Villa Daniela. Un destino encantador para tu escapada especial.",
     price: 40000,
@@ -119,14 +119,7 @@ const arrayProducts = [
     description: "Explora la mística Piedra del Indio y conecta con la energía de la naturaleza. Un lugar lleno de historia y belleza.",
     price: 5000,
     image: zuluaga,
-  },
-    {
-    id: "price_1O618yFqzLAtNtxMegiEXcVb",
-    name: "Piedra del Indio",
-    description: "Explora la mística Piedra del Indio y conecta con la energía de la naturaleza. Un lugar lleno de historia y belleza.",
-    price: 5000,
-    image: zuluaga,
-  },
+
 ];
 
 function getProductData(id) {
